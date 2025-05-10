@@ -1,1 +1,12 @@
+# streamlit_app.py
+import streamlit as st
 
+st.title("Road Safety Predictor")
+hour = st.slider("Hour of Day", 0, 23)
+weather = st.selectbox("Weather", ['Clear', 'Rainy', 'Foggy'])
+
+# Dummy prediction for illustration
+if hour > 18:
+    st.warning("High accident risk!")
+else:
+    st.success("Low risk")
